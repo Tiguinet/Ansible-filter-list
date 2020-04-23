@@ -1,0 +1,6 @@
+[th2]
+th2core.tigiuinet.net
+
+[all:vars]
+ansible_connection=ssh
+ansible_port=2022

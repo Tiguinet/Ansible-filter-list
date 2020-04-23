@@ -1,0 +1,8 @@
+/routing filter add chain=self-net-in prefix=45.90.160.0/24 invert-match=no action=discard set-bgp-prepend-path=""
+/routing filter add chain=self-net-in prefix=2a0d:ef00::/29 invert-match=no action=discard set-bgp-prepend-path=""
+/routing filter add chain=self-net-in invert-match=no action=jump jump-target=GENERIC_PREFIX_LIST set-bgp-prepend-path=""
+/routing filter add chain=self-net-out prefix=45.90.160.0/24 invert-match=no action=accept set-bgp-prepend-path=""
+/routing filter add chain=self-net-out prefix=2a0d:ef00::/29 invert-match=no action=accept set-bgp-prepend-path=""
+/routing filter add chain=self-net-full-out prefix=45.90.160.0/24 prefix-length=25-32 invert-match=no action=discard set-bgp-prepend-path=""
+/routing filter add chain=self-net-full-out prefix=2a0d:ef00::/29 prefix-length=30-128 invert-match=no action=discard set-bgp-prepend-path=""
+/routing filter add chain=self-net-full-out invert-match=no action=jump jump-target=GENERIC_PREFIX_LIST set-bgp-prepend-path=""
