@@ -1,5 +1,5 @@
 [th2]
-th2core.tigiuinet.net
+th2core.tiguinet.net
 
 [all:vars]
 ansible_connection=ssh
